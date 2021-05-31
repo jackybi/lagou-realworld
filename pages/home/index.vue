@@ -170,7 +170,7 @@
 <script>
 import {
   getArticles,
-  getYourFeedArticles,
+  getFeedArticles,
   addFavorite,
   deleteFavorite
 } from '@/api/article'
@@ -187,7 +187,7 @@ export default {
 
     const loadArticles = tab === 'global_feed'
       ? getArticles
-      : getYourFeedArticles
+      : getFeedArticles
 
     const [ articleRes, tagRes ] = await Promise.all([
       loadArticles({
